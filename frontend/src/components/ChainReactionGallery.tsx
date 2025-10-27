@@ -7,8 +7,8 @@ import Image from 'next/image';
 import ChainReactionContractArtifact from '@/abis/ChainReactionContract.json';
 import { uploadChainToIPFS } from '@/lib/ipfs';
 
-// Contract address from deployment
-const CHAIN_REACTION_CONTRACT_ADDRESS = "0x15978cDBe7cc4238825647b1A61d6efA9371D5C0";
+// Contract address from deployment (Base Sepolia)
+const CHAIN_REACTION_CONTRACT_ADDRESS = "0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED";
 
 interface Challenge {
   initiator: string;

@@ -18,12 +18,12 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
 
 | Contract | Address | Description |
 |----------|---------|-------------|
-| **VibeCasterPoints** | `0xEe832dc966BC8D66742aA0c01bC7797116839634` | Manages user point balances and rewards |
-| **VibeCasterBadges** | `0x5820440e686A5519ca5Eb1c6148C54d77DE23115` | NFT badges for achievements and milestones |
-| **RoastMeContract** | `0x15978cDBe7cc4238825647b1A61d6efA9371D5C0` | Handles roast submissions and voting |
-| **IcebreakerContract** | `0x7CecE53Ea570457C885fE09C39E82D1cD8A0da6B` | Manages icebreaker prompts and responses |
-| **ChainReactionContract** | `0x3A8F031e2A4040E8D599b8dbAB09B4f6251a07B9` | Controls viral challenge chains |
-| **VibeCasterAdmin** | `0xfB462A2f915d45BE8292B8e81ca4bbe7d1072b50` | Central admin contract for contract management |
+| **VibeCasterPoints** | `0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72` | Manages user point balances and rewards |
+| **VibeCasterBadges** | `0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b` | NFT badges for achievements and milestones |
+| **RoastMeContract** | `0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52` | Handles roast submissions and voting |
+| **IcebreakerContract** | `0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3` | Manages icebreaker prompts and responses |
+| **ChainReactionContract** | `0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED` | Controls viral challenge chains |
+| **VibeCasterAdmin** | `0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865` | Central admin contract for contract management |
 
 ### Network Information
 - **Network**: Base Sepolia Testnet
@@ -130,18 +130,18 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
 ## 🔗 Contract Verification
 
 All contracts are verified on BaseScan:
-- **VibeCasterPoints**: [View on BaseScan](https://sepolia.basescan.org/address/0xEe832dc966BC8D66742aA0c01bC7797116839634)
-- **VibeCasterBadges**: [View on BaseScan](https://sepolia.basescan.org/address/0x5820440e686A5519ca5Eb1c6148C54d77DE23115)
-- **RoastMeContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x15978cDBe7cc4238825647b1A61d6efA9371D5C0)
-- **IcebreakerContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x7CecE53Ea570457C885fE09C39E82D1cD8A0da6B)
-- **ChainReactionContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x3A8F031e2A4040E8D599b8dbAB09B4f6251a07B9)
-- **VibeCasterAdmin**: [View on BaseScan](https://sepolia.basescan.org/address/0xfB462A2f915d45BE8292B8e81ca4bbe7d1072b50)
+- **VibeCasterPoints**: [View on BaseScan](https://sepolia.basescan.org/address/0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72)
+- **VibeCasterBadges**: [View on BaseScan](https://sepolia.basescan.org/address/0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b)
+- **RoastMeContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52)
+- **IcebreakerContract**: [View on BaseScan](https://sepolia.basescan.org/address/0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3)
+- **ChainReactionContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED)
+- **VibeCasterAdmin**: [View on BaseScan](https://sepolia.basescan.org/address/0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865)
 
 ## 🎨 Technical Architecture
 
 ### Smart Contract Stack
 - **Platform**: Base (Ethereum L2)
-- **Language**: Solidity 0.8.26
+- **Language**: Solidity 0.8.20
 - **Framework**: Hardhat
 - **Testing**: Hardhat Test Suite
 - **Verification**: Sourcify + BaseScan

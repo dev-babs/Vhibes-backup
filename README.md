@@ -19,8 +19,11 @@ VibeCaster/
 
 ### 🏗️ Smart Contracts (`smart-contract/`)
 
-- **Network**: Base mainnet
+- **Network**: Base Sepolia (Testnet)
+- **Chain ID**: 84532
 - **Framework**: Hardhat
+- **Language**: Solidity 0.8.20
+- **Latest Deployment**: October 27, 2025
 - **Contracts**:
   - `VibeCasterAdmin.sol` - Central admin for platform management
   - `VibeCasterPoints.sol` - User points and rewards system
@@ -28,6 +31,14 @@ VibeCaster/
   - `RoastMeContract.sol` - AI-powered roast submissions and voting
   - `IcebreakerContract.sol` - Interactive prompts, responses, and polls
   - `ChainReactionContract.sol` - Viral challenges and responses
+  
+**Deployed Addresses (Base Sepolia)**:
+- VibeCasterPoints: `0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72`
+- VibeCasterBadges: `0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b`
+- RoastMeContract: `0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52`
+- IcebreakerContract: `0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3`
+- ChainReactionContract: `0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED`
+- VibeCasterAdmin: `0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865`
 
 ### 🎨 Frontend (`frontend/`)
 
@@ -51,8 +62,9 @@ VibeCaster/
 - npm or yarn
 - Hardhat (for smart contract development)
 - MetaMask or any Web3 wallet
-- Base mainnet ETH
+- Base Sepolia ETH for testnet deployment
 - Hugging Face API key (for AI features)
+- Alchemy API key (for Base Sepolia RPC)
 
 ### Frontend Setup
 
@@ -167,10 +179,11 @@ VibeCaster/
 - **IPFS (Pinata)** - Decentralized storage
 
 ### Smart Contracts
-- **Solidity** - Smart contract language
+- **Solidity 0.8.20** - Smart contract language
 - **Hardhat** - Development framework
 - **OpenZeppelin** - Security libraries
 - **Base Network** - Layer 2 scaling solution
+- **Deployed on**: Base Sepolia Testnet (Chain ID: 84532)
 
 ### AI & Storage
 - **Hugging Face** - AI model inference

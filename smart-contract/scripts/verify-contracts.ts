@@ -1,20 +1,20 @@
-import { ethers } from "hardhat";
+import { run } from "hardhat";
 
 async function main() {
-  console.log("🔍 Verifying VibeCaster contracts on BaseScan...\n");
+  console.log("🔍 Verifying VibeCaster contracts on BaseScan (Base Sepolia)...\n");
 
-  // Contract addresses from successful deployment on Base Mainnet
+  // Contract addresses from latest deployment on Base Sepolia
   const contracts = [
     {
       name: "VibeCasterPoints",
-      address: "0x60Dc29BE10cf0721F62DEEA76FC98C0cE60cf199",
-      constructorArgs: ["0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10"] // deployer address
+      address: "0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72",
+      constructorArgs: ["0x0eE1F2b663547dAa487F57C517C7563AdCf86da0"] // deployer address
     },
     {
       name: "VibeCasterBadges",
-      address: "0xe2afB6D954A151361d0d222b9Ed7b3AF53Bcc6e4",
+      address: "0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b",
       constructorArgs: [
-        "0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10", // owner
+        "0x0eE1F2b663547dAa487F57C517C7563AdCf86da0", // owner
         "VibeCaster Badges", // name
         "VCB", // symbol
         "https://ipfs.io/ipfs/" // baseURI
@@ -22,35 +22,35 @@ async function main() {
     },
     {
       name: "RoastMeContract",
-      address: "0x91a89F6D69bbc83BE54b5A60677116D0283507Af",
+      address: "0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52",
       constructorArgs: [
-        "0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10", // owner
-        "0x60Dc29BE10cf0721F62DEEA76FC98C0cE60cf199", // points contract
-        "0xe2afB6D954A151361d0d222b9Ed7b3AF53Bcc6e4"  // badges contract
+        "0x0eE1F2b663547dAa487F57C517C7563AdCf86da0", // owner
+        "0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72", // points contract
+        "0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b"  // badges contract
       ]
     },
     {
       name: "IcebreakerContract",
-      address: "0xB004FEfe4B061586a7Bf5936CE8C34847b8c896f",
+      address: "0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3",
       constructorArgs: [
-        "0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10", // owner
-        "0x60Dc29BE10cf0721F62DEEA76FC98C0cE60cf199", // points contract
-        "0xe2afB6D954A151361d0d222b9Ed7b3AF53Bcc6e4"  // badges contract
+        "0x0eE1F2b663547dAa487F57C517C7563AdCf86da0", // owner
+        "0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72", // points contract
+        "0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b"  // badges contract
       ]
     },
     {
       name: "ChainReactionContract",
-      address: "0xF45368bf5A00b48E8571e4b85054583bF818014E",
+      address: "0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED",
       constructorArgs: [
-        "0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10", // owner
-        "0x60Dc29BE10cf0721F62DEEA76FC98C0cE60cf199", // points contract
-        "0xe2afB6D954A151361d0d222b9Ed7b3AF53Bcc6e4"  // badges contract
+        "0x0eE1F2b663547dAa487F57C517C7563AdCf86da0", // owner
+        "0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72", // points contract
+        "0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b"  // badges contract
       ]
     },
     {
       name: "VibeCasterAdmin",
-      address: "0xbA9ec8012Cef69784044255398aBe2C7A6A22702",
-      constructorArgs: ["0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10"] // owner
+      address: "0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865",
+      constructorArgs: ["0x0eE1F2b663547dAa487F57C517C7563AdCf86da0"] // owner
     }
   ];
 
@@ -66,41 +66,28 @@ async function main() {
     try {
       console.log(`🔍 Verifying ${contract.name}...`);
       
-      // Run hardhat verify command
-      const { exec } = require('child_process');
-      const verifyCommand = `npx hardhat verify --network base-mainnet ${contract.address} ${contract.constructorArgs.join(' ')}`;
-      
-      exec(verifyCommand, (error: any, stdout: any, stderr: any) => {
-        if (error) {
-          console.log(`❌ Failed to verify ${contract.name}: ${error.message}`);
-          return;
-        }
-        if (stderr) {
-          console.log(`⚠️  Warning for ${contract.name}: ${stderr}`);
-        }
-        console.log(`✅ ${contract.name} verification output:`);
-        console.log(stdout);
-        console.log(`🔗 View on BaseScan: https://basescan.org/address/${contract.address}\n`);
+      await run("verify:verify", {
+        address: contract.address,
+        constructorArguments: contract.constructorArgs,
       });
-
+      
+      console.log(`✅ ${contract.name} verified successfully!`);
+      console.log(`🔗 View on BaseScan: https://sepolia.basescan.org/address/${contract.address}\n`);
+      
       // Add delay between verifications to avoid rate limiting
       await new Promise(resolve => setTimeout(resolve, 5000));
       
-    } catch (error) {
-      console.log(`❌ Error verifying ${contract.name}:`, error);
+    } catch (error: any) {
+      if (error.message.includes("Already Verified")) {
+        console.log(`✅ ${contract.name} is already verified!`);
+      } else {
+        console.log(`❌ Failed to verify ${contract.name}:`, error.message);
+      }
+      console.log();
     }
   }
 
   console.log("🎉 Verification process completed!");
-  console.log("\n📋 Manual verification commands:");
-  console.log("If automatic verification fails, run these commands manually:");
-  console.log();
-  
-  contracts.forEach(contract => {
-    console.log(`# ${contract.name}`);
-    console.log(`npx hardhat verify --network base-mainnet ${contract.address} ${contract.constructorArgs.join(' ')}`);
-    console.log();
-  });
 }
 
 main()

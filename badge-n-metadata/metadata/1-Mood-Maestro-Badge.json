@@ -1,0 +1,20 @@
+{
+  "name": "Mood Maestro Badge",
+  "description": "Awarded to users for consistent mood tracking and engagement on VibeCaster.",
+  "image": "ipfs://QmYourImageHashHere",
+  "external_url": "https://vibecasters.vercel.app",
+  "attributes": [
+    {
+      "trait_type": "Badge Type",
+      "value": "Mood Maestro"
+    },
+    {
+      "trait_type": "Milestone",
+      "value": "Mood Maestro Milestone"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

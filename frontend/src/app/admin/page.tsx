@@ -22,13 +22,13 @@ const RoastMeContractABI = RoastMeContractArtifact.abi;
 const IcebreakerContractABI = IcebreakerContractArtifact.abi;
 const ChainReactionContractABI = ChainReactionContractArtifact.abi;
 
-// Contract addresses (update with actual deployed addresses)
-const VIBECASTER_ADMIN_ADDRESS = "0xfB462A2f915d45BE8292B8e81ca4bbe7d1072b50";
-const VIBECASTER_POINTS_ADDRESS = "0xEe832dc966BC8D66742aA0c01bC7797116839634";
-const VIBECASTER_BADGES_ADDRESS = "0x5820440e686A5519ca5Eb1c6148C54d77DE23115";
-const ROAST_ME_CONTRACT_ADDRESS = "0x15978cDBe7cc4238825647b1A61d6efA9371D5C0";
-const ICEBREAKER_CONTRACT_ADDRESS = "0x7CecE53Ea570457C885fE09C39E82D1cD8A0da6B";
-const CHAIN_REACTION_CONTRACT_ADDRESS = "0x3A8F031e2A4040E8D599b8dbAB09B4f6251a07B9";
+// Contract addresses (Base Sepolia - Latest Deployment)
+const VIBECASTER_ADMIN_ADDRESS = "0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865";
+const VIBECASTER_POINTS_ADDRESS = "0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72";
+const VIBECASTER_BADGES_ADDRESS = "0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b";
+const ROAST_ME_CONTRACT_ADDRESS = "0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52";
+const ICEBREAKER_CONTRACT_ADDRESS = "0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3";
+const CHAIN_REACTION_CONTRACT_ADDRESS = "0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED";
 
 // IPFS Upload Function for Badges (Private Files + Groups)
 async function uploadBadgeToIPFS(
@@ -37,7 +37,7 @@ async function uploadBadgeToIPFS(
   badgeDescription: string,
   badgeType: string,
   rarity: string,
-      externalUrl: string = "https://vibes-caster.vercel.app"
+  externalUrl: string = "https://vibecasters.vercel.app"
 ) {
   try {
     if (!process.env.NEXT_PUBLIC_PINATA_JWT) {
