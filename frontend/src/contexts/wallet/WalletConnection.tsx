@@ -76,7 +76,7 @@ const WalletConnection = () => {
       </button>
 
       {isDropdownOpen && (
-        <div className="absolute right-0 top-full mt-2 w-72 origin-top-right rounded-xl border border-vibecaster-lavender/20 bg-vibecaster-light-purple backdrop-blur-sm p-2 shadow-lg z-50">
+        <div className="absolute right-0 top-full mt-2 w-72 origin-top-right rounded-xl border border-vibecaster-lavender/20 bg-vibecaster-dark/90 backdrop-blur-md p-2 shadow-lg z-50">
           {/* Chain warning section at top */}
           {isWrongChain && (
             <div className="mb-3 pb-3 border-b border-gray-200">
