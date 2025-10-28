@@ -37,7 +37,13 @@ export const config = createConfig({
   },
   connectors: [
     // Farcaster Mini App connector as the primary option
-    farcasterMiniApp(),
+    farcasterMiniApp(), // Base configuration - no parameters needed for this version
+    // farcasterMiniApp({
+    //   // Ensure proper configuration for Farcaster Mini App
+    //   appName: "VibeCaster",
+    //   appDescription: "The Future of Social on Farcaster",
+    //   appIcon: "https://vibecasters.vercel.app/vibeCaster-logo.png",
+    // }),
     injected({
       target: "metaMask",
     }),
