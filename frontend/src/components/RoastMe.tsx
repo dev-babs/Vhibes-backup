@@ -9,7 +9,7 @@ import RoastMeContractArtifact from "../abis/RoastMeContract.json";
 import { uploadRoastToIPFS } from "../lib/ipfs";
 
 const RoastMeContractABI = RoastMeContractArtifact.abi;
-const ROAST_ME_CONTRACT_ADDRESS = "0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52"; // Base Sepolia
+const ROAST_ME_CONTRACT_ADDRESS = "0x96A472f40fcab11CB17045c04122Dd6e311F8324"; // Base Mainnet
 
 export default function RoastMe() {
   const { address, isConnected } = useAccount();

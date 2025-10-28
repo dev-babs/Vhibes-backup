@@ -6,8 +6,8 @@ import { parseEther } from 'viem';
 import { FaSnowflake } from 'react-icons/fa';
 import IcebreakerContractArtifact from '@/abis/IcebreakerContract.json';
 
-// Contract address from deployment (Base Sepolia)
-const ICEBREAKER_CONTRACT_ADDRESS = "0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3";
+// Contract address from deployment (Base Mainnet)
+const ICEBREAKER_CONTRACT_ADDRESS = "0x72b92D55195c05E43A7E752839d6eCD23104ca8a";
 
 interface Category {
   name: string;
