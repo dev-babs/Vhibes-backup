@@ -34,7 +34,8 @@ const config: HardhatUserConfig = {
       },
     ],
   },
-  defaultNetwork: "baseSepolia",
+  defaultNetwork: "base",
+  // defaultNetwork: "baseSepolia", // Testnet - commented for mainnet deployment
   networks: {
     // View the networks that are pre-configured.
     // If the network you are looking for is not here you can add new network settings
@@ -96,10 +97,10 @@ const config: HardhatUserConfig = {
       url: "https://mainnet.base.org",
       accounts: [deployerPrivateKey],
     },
-    baseSepolia: {
-      url: "https://sepolia.base.org",
-      accounts: [deployerPrivateKey],
-    },
+    // baseSepolia: {
+    //   url: "https://sepolia.base.org",
+    //   accounts: [deployerPrivateKey],
+    // },
     scrollSepolia: {
       url: "https://sepolia-rpc.scroll.io",
       accounts: [deployerPrivateKey],
