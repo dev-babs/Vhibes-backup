@@ -1,5 +1,5 @@
 {
-  "name": "vibecaster-contracts",
+  "name": "vhibes-contracts",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
     "clean": "hardhat clean"
   },
   "keywords": [
-    "vibecaster",
+    "vhibes",
     "farcaster",
     "social",
     "web3"
   ],
-  "author": "VibeCaster Team",
+  "author": "vhibes Team",
   "license": "MIT",
-  "description": "Smart contracts for VibeCaster - A Farcaster miniapp for social engagement",
+  "description": "Smart contracts for vhibes - A Farcaster miniapp for social engagement",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/chai": "^4.3.20",
