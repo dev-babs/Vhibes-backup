@@ -2,13 +2,13 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./VibeCasterPoints.sol";
-import "./VibeCasterBadges.sol";
+import "./VhibesPoints.sol";
+import "./VhibesBadges.sol";
 
 contract ChainReactionContract is Ownable {
     
-    VibeCasterPoints public pointsContract;
-    VibeCasterBadges public badgesContract;
+    VhibesPoints public pointsContract;
+    VhibesBadges public badgesContract;
     
     struct Challenge {
         address initiator;
@@ -49,8 +49,8 @@ contract ChainReactionContract is Ownable {
         address _pointsContract,
         address _badgesContract
     ) Ownable(admin) {
-        pointsContract = VibeCasterPoints(_pointsContract);
-        badgesContract = VibeCasterBadges(_badgesContract);
+        pointsContract = VhibesPoints(_pointsContract);
+        badgesContract = VhibesBadges(_badgesContract);
     }
 
     function startChallenge(string memory prompt, string memory promptImageIpfsHash) external returns (uint256) {

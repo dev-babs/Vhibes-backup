@@ -2,13 +2,13 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./VibeCasterPoints.sol";
-import "./VibeCasterBadges.sol";
+import "./VhibesPoints.sol";
+import "./VhibesBadges.sol";
 
 contract IcebreakerContract is Ownable {
     
-    VibeCasterPoints public pointsContract;
-    VibeCasterBadges public badgesContract;
+    VhibesPoints public pointsContract;
+    VhibesBadges public badgesContract;
     
     struct Category {
         string name;
@@ -70,8 +70,8 @@ contract IcebreakerContract is Ownable {
         address _pointsContract,
         address _badgesContract
     ) Ownable(admin) {
-        pointsContract = VibeCasterPoints(_pointsContract);
-        badgesContract = VibeCasterBadges(_badgesContract);
+        pointsContract = VhibesPoints(_pointsContract);
+        badgesContract = VhibesBadges(_badgesContract);
     }
 
     // Admin functions - only for setting up categories
