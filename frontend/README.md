@@ -1,14 +1,14 @@
-# VibeCaster 🚀
+# vhibes 🚀
 
 **The Future of Social on Farcaster - AI Roasts, Icebreakers & Viral Challenges!**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-VibeCaster-blue?style=for-the-badge&logo=ethereum)](https://vibecaster.vercel.app)
-[![Farcaster Mini App](https://img.shields.io/badge/Farcaster%20Mini%20App-Available-purple?style=for-the-badge)](https://farcaster.xyz/miniapps/vibecaster)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-vhibes-blue?style=for-the-badge&logo=ethereum)](https://vhibes.vercel.app)
+[![Farcaster Mini App](https://img.shields.io/badge/Farcaster%20Mini%20App-Available-purple?style=for-the-badge)](https://farcaster.xyz/miniapps/vhibes)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 ## 🎯 Overview
 
-VibeCaster is a revolutionary Farcaster mini-app that enhances social interaction and engagement within the Farcaster ecosystem. It integrates three core viral mechanics: AI-generated roasts, quirky icebreakers, and viral chain challenges. Built on Base Sepolia with a modern tech stack, VibeCaster provides a fun, interactive, and shareable experience directly within Farcaster frames.
+vhibes is a revolutionary Farcaster mini-app that enhances social interaction and engagement within the Farcaster ecosystem. It integrates three core viral mechanics: AI-generated roasts, quirky icebreakers, and viral chain challenges. Built on Base with a modern tech stack, vhibes provides a fun, interactive, and shareable experience directly within Farcaster frames.
 
 ### ✨ Key Features
 
@@ -17,7 +17,7 @@ VibeCaster is a revolutionary Farcaster mini-app that enhances social interactio
 - **⚡ Chain Reaction**: Start viral challenges and join the fun
 - **🏆 Points & Badges**: Earn points and collect achievement badges
 - **📱 Farcaster Integration**: Seamless wallet connection and sharing
-- **🎨 Modern UI**: Dark theme with VibeCaster brand colors
+- **🎨 Modern UI**: Dark theme with vhibes brand colors
 - **🌐 Multi-Wallet Support**: Connect with MetaMask, WalletConnect, and more
 
 ## 🚀 Quick Start
@@ -33,8 +33,8 @@ VibeCaster is a revolutionary Farcaster mini-app that enhances social interactio
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/thebabalola/VibeCaster.git
-   cd VibeCaster/frontend
+   git clone https://github.com/thebabalola/vhibes.git
+   cd vhibes/frontend
    ```
 
 2. **Install dependencies**
@@ -49,9 +49,9 @@ VibeCaster is a revolutionary Farcaster mini-app that enhances social interactio
    
    Add your configuration:
    ```env
-   NEXT_PUBLIC_VIBECASTER_ADMIN_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
-   NEXT_PUBLIC_VIBECASTER_POINTS_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
-   NEXT_PUBLIC_VIBECASTER_BADGES_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
+   NEXT_PUBLIC_VHIBES_ADMIN_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
+   NEXT_PUBLIC_VHIBES_POINTS_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
+   NEXT_PUBLIC_VHIBES_BADGES_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
    NEXT_PUBLIC_ROAST_ME_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
    NEXT_PUBLIC_ICEBREAKER_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
    NEXT_PUBLIC_CHAIN_REACTION_ADDRESS=0x95f87C578aA1d3E72Ba7ee27d2d506c3CE8f8f10
@@ -74,7 +74,7 @@ VibeCaster is a revolutionary Farcaster mini-app that enhances social interactio
 ### Frontend Stack
 
 - **Framework**: Next.js 15 with App Router
-- **Styling**: Tailwind CSS 4 with custom VibeCaster theme
+- **Styling**: Tailwind CSS 4 with custom vhibes theme
 - **Web3**: Wagmi + Viem
 - **Wallet Integration**: Farcaster Mini App Connector + Base MiniKit
 - **UI Components**: Custom components with React Icons
@@ -84,9 +84,9 @@ VibeCaster is a revolutionary Farcaster mini-app that enhances social interactio
 
 ### Smart Contracts (Base Sepolia)
 
-- **VibeCasterAdmin**: Platform administration and authorization
-- **VibeCasterPoints**: Points system and user rewards
-- **VibeCasterBadges**: NFT badges and achievements
+- **VhibesAdmin**: Platform administration and authorization
+- **VhibesPoints**: Points system and user rewards
+- **VhibesBadges**: NFT badges and achievements
 - **RoastMeContract**: AI roast submissions and voting
 - **IcebreakerContract**: Prompts, polls, and responses
 - **ChainReactionContract**: Viral challenges and responses
@@ -100,7 +100,7 @@ src/
 │   ├── admin/             # Admin dashboard (authorized users)
 │   └── api/               # API routes for contract data
 ├── components/            # Reusable React components
-│   ├── VibeCasterDashboard.tsx  # Main dashboard component
+│   ├── VhibesDashboard.tsx  # Main dashboard component
 │   ├── RoastMe.tsx        # AI roast functionality
 │   ├── Icebreaker.tsx     # Icebreaker prompts and polls
 │   ├── ChainReactionGallery.tsx # Viral challenges
@@ -150,7 +150,7 @@ src/
 - **Progress Tracking**: Monitor your journey and achievements
 
 ### 🎨 Modern UI/UX
-- **Dark Theme**: Sleek dark interface with VibeCaster colors
+- **Dark Theme**: Sleek dark interface with vhibes colors
 - **Gradient Backgrounds**: Vertical gradients for visual appeal
 - **DM Mono Font**: Clean, modern typography
 - **Responsive Design**: Optimized for all devices
@@ -162,9 +162,9 @@ src/
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `NEXT_PUBLIC_VIBECASTER_ADMIN_ADDRESS` | Admin contract address | ✅ |
-| `NEXT_PUBLIC_VIBECASTER_POINTS_ADDRESS` | Points contract address | ✅ |
-| `NEXT_PUBLIC_VIBECASTER_BADGES_ADDRESS` | Badges contract address | ✅ |
+| `NEXT_PUBLIC_VHIBES_ADMIN_ADDRESS` | Admin contract address | ✅ |
+| `NEXT_PUBLIC_VHIBES_POINTS_ADDRESS` | Points contract address | ✅ |
+| `NEXT_PUBLIC_VHIBES_BADGES_ADDRESS` | Badges contract address | ✅ |
 | `NEXT_PUBLIC_ROAST_ME_ADDRESS` | RoastMe contract address | ✅ |
 | `NEXT_PUBLIC_ICEBREAKER_ADDRESS` | Icebreaker contract address | ✅ |
 | `NEXT_PUBLIC_CHAIN_REACTION_ADDRESS` | ChainReaction contract address | ✅ |
@@ -194,7 +194,7 @@ npm start
 
 ## 📱 Farcaster Mini App
 
-VibeCaster is designed as a Farcaster Mini App, providing a native experience within the Farcaster ecosystem.
+vhibes is designed as a Farcaster Mini App, providing a native experience within the Farcaster ecosystem.
 
 ### Mini App Features
 - **Automatic Wallet Connection**: Seamless Farcaster wallet integration
@@ -246,19 +246,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: [https://vibecaster.vercel.app](https://vibecaster.vercel.app)
-- **Issues**: [GitHub Issues](https://github.com/thebabalola/VibeCaster/issues)
+- **Documentation**: [https://vhibes.vercel.app](https://vhibes.vercel.app)
+- **Issues**: [GitHub Issues](https://github.com/thebabalola/vhibes/issues)
 - **Discord**: Join our community for support and discussions
 
 ## 🔗 Links
 
-- **Live App**: [https://vibecaster.vercel.app](https://vibecaster.vercel.app)
-- **Farcaster Mini App**: [https://farcaster.xyz/miniapps/vibecaster](https://farcaster.xyz/miniapps/vibecaster)
-- **Smart Contracts**: [Base Sepolia Explorer](https://sepolia.basescan.org)
-- **GitHub**: [https://github.com/thebabalola/VibeCaster](https://github.com/thebabalola/VibeCaster)
+- **Live App**: [https://vhibes.vercel.app](https://vhibes.vercel.app)
+- **Farcaster Mini App**: [https://farcaster.xyz/miniapps/vhibes](https://farcaster.xyz/miniapps/vhibes)
+- **Smart Contracts**: [Base Explorer](https://basescan.org)
+- **GitHub**: [https://github.com/thebabalola/vhibes](https://github.com/thebabalola/vhibes)
 
 ---
 
-**Made with ❤️ by the VibeCaster team**
+**Made with ❤️ by the vhibes team**
 
-*GM VibeCaster fam! Let's make some magic happen! ✨*
+*GM vhibes fam! Let's make some magic happen! ✨*

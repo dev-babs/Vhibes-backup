@@ -4,21 +4,21 @@ import React, { useState, useEffect } from 'react';
 import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
 import { FaFire, FaSnowflake, FaBolt, FaSync, FaTrophy, FaMedal, FaCrown, FaStar, FaLock } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi';
-import VibeCasterPointsArtifact from '../abis/VibeCasterPoints.json';
-import VibeCasterBadgesArtifact from '../abis/VibeCasterBadges.json';
+import VhibesPointsArtifact from '../abis/VhibesPoints.json';
+import VhibesBadgesArtifact from '../abis/VhibesBadges.json';
 import RoastMeContractArtifact from '../abis/RoastMeContract.json';
 import IcebreakerContractArtifact from '../abis/IcebreakerContract.json';
 import ChainReactionContractArtifact from '../abis/ChainReactionContract.json';
 
-const VibeCasterPointsABI = VibeCasterPointsArtifact.abi;
-const VibeCasterBadgesABI = VibeCasterBadgesArtifact.abi;
+const VhibesPointsABI = VhibesPointsArtifact.abi;
+const VhibesBadgesABI = VhibesBadgesArtifact.abi;
 const RoastMeContractABI = RoastMeContractArtifact.abi;
 const IcebreakerContractABI = IcebreakerContractArtifact.abi;
 const ChainReactionContractABI = ChainReactionContractArtifact.abi;
 
 // Contract addresses (Base Mainnet - Latest Deployment)
-const VIBECASTER_POINTS_ADDRESS = "0x738be79661d225048F8C0881adBC47bAA9211b7b";
-const VIBECASTER_BADGES_ADDRESS = "0xc0F8e7dA9d49A635f18d988f7a7C727eB0dA2C44";
+const VHIBES_POINTS_ADDRESS = "0x738be79661d225048F8C0881adBC47bAA9211b7b";
+const VHIBES_BADGES_ADDRESS = "0xc0F8e7dA9d49A635f18d988f7a7C727eB0dA2C44";
 const ROAST_ME_CONTRACT_ADDRESS = "0x96A472f40fcab11CB17045c04122Dd6e311F8324";
 const ICEBREAKER_CONTRACT_ADDRESS = "0x72b92D55195c05E43A7E752839d6eCD23104ca8a";
 const CHAIN_REACTION_CONTRACT_ADDRESS = "0xE09596824F17c41eD18cCe7d7035908526f2BF14";
@@ -79,8 +79,8 @@ export default function Activity({ setActiveTab }: ActivityProps) {
 
   // Contract read functions
   const { data: pointsData } = useReadContract({
-    address: VIBECASTER_POINTS_ADDRESS,
-    abi: VibeCasterPointsABI,
+    address: VHIBES_POINTS_ADDRESS,
+    abi: VhibesPointsABI,
     functionName: "userPoints",
     args: address ? [address] : undefined,
   });
@@ -110,8 +110,8 @@ export default function Activity({ setActiveTab }: ActivityProps) {
   });
 
   const { data: userBadgesData } = useReadContract({
-    address: VIBECASTER_BADGES_ADDRESS,
-    abi: VibeCasterBadgesABI,
+    address: VHIBES_BADGES_ADDRESS,
+    abi: VhibesBadgesABI,
     functionName: "getUserBadges",
     args: address ? [address] : undefined,
   });
@@ -276,8 +276,8 @@ export default function Activity({ setActiveTab }: ActivityProps) {
 
   // Get user level from smart contract
   const { data: userLevelData } = useReadContract({
-    address: VIBECASTER_POINTS_ADDRESS,
-    abi: VibeCasterPointsABI,
+    address: VHIBES_POINTS_ADDRESS,
+    abi: VhibesPointsABI,
     functionName: "getUserLevel",
     args: address ? [address] : undefined,
   });
@@ -332,7 +332,7 @@ export default function Activity({ setActiveTab }: ActivityProps) {
     if (activities.length === 0) {
       activities.push({
         type: "welcome",
-        title: "Welcome to VibeCaster!",
+        title: "Welcome to vhibes!",
         points: "Start earning",
         timestamp: "Now"
       });
@@ -351,10 +351,10 @@ export default function Activity({ setActiveTab }: ActivityProps) {
     }
 
     try {
-      // Call the mint function on the VibeCasterBadges contract
+      // Call the mint function on the VhibesBadges contract
       writeContract({
-        address: VIBECASTER_BADGES_ADDRESS,
-        abi: VibeCasterBadgesABI,
+        address: VHIBES_BADGES_ADDRESS,
+        abi: VhibesBadgesABI,
         functionName: "mintBadge",
         args: [badgeId],
       });
@@ -387,7 +387,7 @@ export default function Activity({ setActiveTab }: ActivityProps) {
       {/* Header */}
       <div className="text-center">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-vibecaster-lavender mb-2">Activity Dashboard</h2>
-        <p className="text-sm md:text-base text-vibecaster-light-purple">Track your VibeCaster journey and achievements</p>
+        <p className="text-sm md:text-base text-vibecaster-light-purple">Track your vhibes journey and achievements</p>
       </div>
 
       {/* Main Activity Grid */}

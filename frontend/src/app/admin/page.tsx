@@ -7,17 +7,17 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 // Import ABIs
-import VibeCasterAdminArtifact from "../../abis/VibeCasterAdmin.json";
-import VibeCasterPointsArtifact from "../../abis/VibeCasterPoints.json";
-import VibeCasterBadgesArtifact from "../../abis/VibeCasterBadges.json";
+import VhibesAdminArtifact from "../../abis/VhibesAdmin.json";
+import VhibesPointsArtifact from "../../abis/VhibesPoints.json";
+import VhibesBadgesArtifact from "../../abis/VhibesBadges.json";
 import RoastMeContractArtifact from "../../abis/RoastMeContract.json";
 import IcebreakerContractArtifact from "../../abis/IcebreakerContract.json";
 import ChainReactionContractArtifact from "../../abis/ChainReactionContract.json";
 
 // Extract ABIs from artifacts
-const VibeCasterAdminABI = VibeCasterAdminArtifact.abi;
-const VibeCasterPointsABI = VibeCasterPointsArtifact.abi;
-const VibeCasterBadgesABI = VibeCasterBadgesArtifact.abi;
+const VhibesAdminABI = VhibesAdminArtifact.abi;
+const VhibesPointsABI = VhibesPointsArtifact.abi;
+const VhibesBadgesABI = VhibesBadgesArtifact.abi;
 const RoastMeContractABI = RoastMeContractArtifact.abi;
 const IcebreakerContractABI = IcebreakerContractArtifact.abi;
 const ChainReactionContractABI = ChainReactionContractArtifact.abi;
@@ -139,7 +139,7 @@ export default function AdminPage() {
   // Check if current user is admin
   const { data: isAuthorizedAdmin } = useReadContract({
     address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-    abi: VibeCasterAdminABI,
+    abi: VhibesAdminABI,
     functionName: "isAuthorizedAdmin",
     args: address ? [address] : undefined,
   });
@@ -147,19 +147,19 @@ export default function AdminPage() {
   // Get platform stats - only call when admin is authorized
   const { data: roastStats } = useReadContract({
     address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-    abi: VibeCasterAdminABI,
+    abi: VhibesAdminABI,
     functionName: "getRoastMeStats",
   });
 
   const { data: icebreakerStats } = useReadContract({
     address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-    abi: VibeCasterAdminABI,
+    abi: VhibesAdminABI,
     functionName: "getIcebreakerStats",
   });
 
   const { data: chainStats } = useReadContract({
     address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-    abi: VibeCasterAdminABI,
+    abi: VhibesAdminABI,
     functionName: "getChainReactionStats",
   });
 
@@ -249,7 +249,7 @@ export default function AdminPage() {
   const updateRoastMePoints = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "updateRoastMePoints",
       args: [pointsForm.roastPoints, pointsForm.roastVotePoints, pointsForm.roastFunnyPoints]
     });
@@ -258,7 +258,7 @@ export default function AdminPage() {
   const updateIcebreakerPoints = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "updateIcebreakerPoints",
       args: [pointsForm.icebreakerPromptPoints, pointsForm.icebreakerResponsePoints, pointsForm.icebreakerVotePoints]
     });
@@ -267,7 +267,7 @@ export default function AdminPage() {
   const updateChainReactionPoints = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "updateChainReactionPoints",
       args: [pointsForm.chainChallengePoints, pointsForm.chainResponsePoints]
     });
@@ -276,7 +276,7 @@ export default function AdminPage() {
   const updateDailyLoginPoints = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "updateDailyLoginPoints",
       args: [pointsForm.dailyLoginPoints, pointsForm.streakBonusPoints, pointsForm.activityStreakBonus]
     });
@@ -285,7 +285,7 @@ export default function AdminPage() {
   const createIcebreakerCategory = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "createIcebreakerCategory",
       args: [newCategory.name, newCategory.description]
     });
@@ -294,7 +294,7 @@ export default function AdminPage() {
   const updateBadgeRequirements = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "setBadgeRequirements",
       args: [
         badgeForm.firstActivityRequirement,
@@ -416,7 +416,7 @@ export default function AdminPage() {
   const authorizeAdmin = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "authorizeAdmin",
       args: [adminManagement.newAdminAddress]
     });
@@ -425,7 +425,7 @@ export default function AdminPage() {
   const deauthorizeAdmin = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "deauthorizeAdmin",
       args: [adminManagement.newAdminAddress]
     });
@@ -435,7 +435,7 @@ export default function AdminPage() {
   const authorizeContract = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "authorizeContractInPoints",
       args: [adminManagement.contractToAuthorize]
     });
@@ -444,7 +444,7 @@ export default function AdminPage() {
   const deauthorizeContract = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "deauthorizeContractInPoints",
       args: [adminManagement.contractToAuthorize]
     });
@@ -454,7 +454,7 @@ export default function AdminPage() {
   const authorizeMinter = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "authorizeMinterInBadges",
       args: [adminManagement.minterToAuthorize]
     });
@@ -463,7 +463,7 @@ export default function AdminPage() {
   const deauthorizeMinter = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "deauthorizeMinterInBadges",
       args: [adminManagement.minterToAuthorize]
     });
@@ -473,7 +473,7 @@ export default function AdminPage() {
   const updateBadgeURIs = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "setBadgeURIs",
       args: [
         badgeURIs.firstActivityBadgeURI,
@@ -489,7 +489,7 @@ export default function AdminPage() {
   const updateBadgeBaseURI = () => {
     writeContract({
       address: VIBECASTER_ADMIN_ADDRESS as `0x${string}`,
-      abi: VibeCasterAdminABI,
+      abi: VhibesAdminABI,
       functionName: "setBadgeBaseURI",
       args: [badgeURIs.baseURI]
     });
@@ -499,7 +499,7 @@ export default function AdminPage() {
   const awardPoints = () => {
     writeContract({
       address: VIBECASTER_POINTS_ADDRESS as `0x${string}`,
-      abi: VibeCasterPointsABI,
+      abi: VhibesPointsABI,
       functionName: "earnPoints",
       args: [adminManagement.userAddress, adminManagement.pointsToAward, adminManagement.reason]
     });
@@ -508,7 +508,7 @@ export default function AdminPage() {
   const deductPoints = () => {
     writeContract({
       address: VIBECASTER_POINTS_ADDRESS as `0x${string}`,
-      abi: VibeCasterPointsABI,
+      abi: VhibesPointsABI,
       functionName: "deductPoints",
       args: [adminManagement.userAddress, adminManagement.pointsToDeduct, adminManagement.reason]
     });

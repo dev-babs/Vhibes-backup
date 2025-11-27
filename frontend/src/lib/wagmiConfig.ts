@@ -18,10 +18,10 @@ const getWalletConnectConnector = () => {
     walletConnectConnector = walletConnect({
       projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "",
       metadata: {
-        name: "VibeCaster",
+        name: "vhibes",
         description: "The Future of Social on Farcaster - AI roasts, icebreakers, and viral challenges",
-        url: "https://vibecasters.vercel.app", // Updated to correct URL
-        icons: ["https://vibecasters.vercel.app/vibeCaster-logo.png"], // Updated to correct URL
+        url: "https://vhibes.vercel.app", // Updated to correct URL
+        icons: ["https://vhibes.vercel.app/vhibes-logo.png"], // Updated to correct URL
       },
     });
   }
@@ -40,16 +40,16 @@ export const config = createConfig({
     farcasterMiniApp(), // Base configuration - no parameters needed for this version
     // farcasterMiniApp({
     //   // Ensure proper configuration for Farcaster Mini App
-    //   appName: "VibeCaster",
+    //   appName: "vhibes",
     //   appDescription: "The Future of Social on Farcaster",
-    //   appIcon: "https://vibecasters.vercel.app/vibeCaster-logo.png",
+    //   appIcon: "https://vhibes.vercel.app/vhibes-logo.png",
     // }),
     injected({
       target: "metaMask",
     }),
     metaMask(),
     coinbaseWallet({
-      appName: "VibeCaster",
+      appName: "vhibes",
     }),
     getWalletConnectConnector(),
   ],

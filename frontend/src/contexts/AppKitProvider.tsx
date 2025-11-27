@@ -15,12 +15,12 @@ if (!projectId) {
   throw new Error('Project ID is not defined')
 }
 
-// Set up metadata for VibeCaster
+// Set up metadata for vhibes
 const metadata = {
-  name: 'VibeCaster',
+  name: 'vhibes',
   description: 'The Future of Social on Farcaster - AI roasts, icebreakers, and viral challenges',
-  url: 'https://vibecasters.vercel.app',
-  icons: ['https://vibecasters.vercel.app/vibeCaster-logo.png']
+  url: 'https://vhibes.vercel.app',
+  icons: ['https://vhibes.vercel.app/vhibes-logo.png']
 }
 
 // Create the AppKit modal

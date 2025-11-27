@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "VibeCasterPoints",
-  "sourceName": "contracts/VibeCasterPoints.sol",
+  "contractName": "VhibesPoints",
+  "sourceName": "contracts/VhibesPoints.sol",
   "abi": [
     {
       "inputs": [

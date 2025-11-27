@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "VibeCasterBadges",
-  "sourceName": "contracts/VibeCasterBadges.sol",
+  "contractName": "VhibesBadges",
+  "sourceName": "contracts/VhibesBadges.sol",
   "abi": [
     {
       "inputs": [

@@ -256,7 +256,7 @@ export default function RoastMe() {
   };
 
   const shareToFarcaster = () => {
-    const shareText = `I just got roasted on VibeCaster! 😂🔥\n\n"${roastResult}"\n\nThis is hilarious! You too can try it out at vibecaster.xyz - dare to get roasted? 🔥`;
+    const shareText = `I just got roasted on vhibes! 😂🔥\n\n"${roastResult}"\n\nThis is hilarious! You too can try it out at vhibes.xyz - dare to get roasted? 🔥`;
     
     // Farcaster sharing URL (you can customize this based on Farcaster's API)
     const farcasterUrl = `https://warpcast.com/~/compose?text=${encodeURIComponent(shareText)}`;
@@ -265,7 +265,7 @@ export default function RoastMe() {
   };
 
   const shareToTwitter = () => {
-    const shareText = `I just got roasted on VibeCaster! 😂🔥\n\n"${roastResult}"\n\nThis is hilarious! You too can try it out at vibecaster.xyz - dare to get roasted? 🔥`;
+    const shareText = `I just got roasted on vhibes! 😂🔥\n\n"${roastResult}"\n\nThis is hilarious! You too can try it out at vhibes.xyz - dare to get roasted? 🔥`;
     
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
     
@@ -273,7 +273,7 @@ export default function RoastMe() {
   };
 
   const copyToClipboard = async () => {
-    const shareText = `I just got roasted on VibeCaster! 😂🔥\n\n"${roastResult}"\n\nThis is hilarious! You too can try it out at vibecaster.xyz - dare to get roasted? 🔥`;
+    const shareText = `I just got roasted on vhibes! 😂🔥\n\n"${roastResult}"\n\nThis is hilarious! You too can try it out at vhibes.xyz - dare to get roasted? 🔥`;
     
     try {
       await navigator.clipboard.writeText(shareText);
