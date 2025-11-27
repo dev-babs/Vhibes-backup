@@ -1,10 +1,10 @@
-# VibeCaster Smart Contracts
+# vhibes Smart Contracts
 
-This directory contains the smart contracts for VibeCaster, a Farcaster mini-app designed to enhance social interaction and engagement within the Farcaster ecosystem. The contracts implement three core viral mechanics: AI-generated roasts, quirky icebreakers, and viral chain challenges, along with a comprehensive points and badges system.
+This directory contains the smart contracts for vhibes, a Farcaster mini-app designed to enhance social interaction and engagement within the Farcaster ecosystem. The contracts implement three core viral mechanics: AI-generated roasts, quirky icebreakers, and viral chain challenges, along with a comprehensive points and badges system.
 
 ## 🎯 Project Overview
 
-VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing smart contracts, a frontend interface, and IPFS for data storage. The architecture is designed to be serverless, eliminating the need for a traditional backend.
+vhibes is a decentralized application (dApp) built on Farcaster, utilizing smart contracts, a frontend interface, and IPFS for data storage. The architecture is designed to be serverless, eliminating the need for a traditional backend.
 
 ### Core Features
 - **🔥 Roast Me Mode**: Users submit selfies to receive AI-generated roasts with community voting
@@ -18,12 +18,12 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
 
 | Contract | Address | Description |
 |----------|---------|-------------|
-| **VibeCasterPoints** | `0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72` | Manages user point balances and rewards |
-| **VibeCasterBadges** | `0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b` | NFT badges for achievements and milestones |
+| **VhibesPoints** | `0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72` | Manages user point balances and rewards |
+| **VhibesBadges** | `0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b` | NFT badges for achievements and milestones |
 | **RoastMeContract** | `0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52` | Handles roast submissions and voting |
 | **IcebreakerContract** | `0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3` | Manages icebreaker prompts and responses |
 | **ChainReactionContract** | `0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED` | Controls viral challenge chains |
-| **VibeCasterAdmin** | `0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865` | Central admin contract for contract management |
+| **VhibesAdmin** | `0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865` | Central admin contract for contract management |
 
 ### Network Information
 - **Network**: Base Sepolia Testnet
@@ -34,7 +34,7 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
 
 ## 🏗️ Contract Architecture
 
-### 1. VibeCasterPoints Contract
+### 1. VhibesPoints Contract
 **Purpose**: Manages user point balances and rewards
 - **Functions**:
   - `addPoints(address user, uint256 amount)`: Award points to users
@@ -42,7 +42,7 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
   - `getPoints(address user)`: Get user's point balance
   - `authorizeContract(address contract)`: Authorize contracts to award points
 
-### 2. VibeCasterBadges Contract
+### 2. VhibesBadges Contract
 **Purpose**: NFT badges for achievements and milestones
 - **Functions**:
   - `mintBadge(address to, uint256 badgeId)`: Mint a new badge
@@ -74,7 +74,7 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
   - `getChain(uint256 chainId)`: Get chain details and responses
   - `getUserChains(address user)`: Get chains started by user
 
-### 6. VibeCasterAdmin
+### 6. VhibesAdmin
 **Purpose**: Central admin contract for contract management
 - **Functions**:
   - `setContracts(address points, address badges, address roast, address icebreaker, address chainReaction)`: Set all contract addresses
@@ -130,12 +130,12 @@ VibeCaster is a decentralized application (dApp) built on Farcaster, utilizing s
 ## 🔗 Contract Verification
 
 All contracts are verified on BaseScan:
-- **VibeCasterPoints**: [View on BaseScan](https://sepolia.basescan.org/address/0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72)
-- **VibeCasterBadges**: [View on BaseScan](https://sepolia.basescan.org/address/0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b)
+- **VhibesPoints**: [View on BaseScan](https://sepolia.basescan.org/address/0x74c0BBa16c56A33eDF5af21B50358D661AF2FE72)
+- **VhibesBadges**: [View on BaseScan](https://sepolia.basescan.org/address/0x409d41Eb5D25045a1b94BD8b3eE82a6D403F188b)
 - **RoastMeContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x4AC02AAde749f2a9d9CFf65153638c88E6e2Da52)
 - **IcebreakerContract**: [View on BaseScan](https://sepolia.basescan.org/address/0xBf38C9D9920b1A64E0a38702228B1DED1fF84Af3)
 - **ChainReactionContract**: [View on BaseScan](https://sepolia.basescan.org/address/0x4D5E80344DBdB90C039fa3fd7b17740ce8d6FAED)
-- **VibeCasterAdmin**: [View on BaseScan](https://sepolia.basescan.org/address/0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865)
+- **VhibesAdmin**: [View on BaseScan](https://sepolia.basescan.org/address/0xa7c38A8aF5c6Caf74F9A181EA745a2dE4B43B865)
 
 ## 🎨 Technical Architecture
 
@@ -217,6 +217,6 @@ For technical support or questions about the smart contracts:
 
 ---
 
-**VibeCaster** - Making Farcaster more fun, one roast at a time! 🔥
+**vhibes** - Making Farcaster more fun, one roast at a time! 🔥
 
 
