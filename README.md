@@ -1,17 +1,17 @@
-# VibeCaster 🚀
+# vhibes 🚀
 
 **The Future of Social on Farcaster - Roast, Create & Connect!**
 
 ## 🎯 Overview
 
-VibeCaster is a revolutionary Web3 social platform built on Base that combines AI-powered roasting, interactive icebreakers, and viral chain reactions. Built with modern web technologies and deeply integrated with Farcaster, it provides a unique social experience for creating, sharing, and connecting through humor and creativity.
+vhibes is a revolutionary Web3 social platform built on Base that combines AI-powered roasting, interactive icebreakers, and viral chain reactions. Built with modern web technologies and deeply integrated with Farcaster, it provides a unique social experience for creating, sharing, and connecting through humor and creativity.
 
 ## 📁 Project Structure
 
-This repository contains the complete VibeCaster project with the following components:
+This repository contains the complete vhibes project with the following components:
 
 ```
-VibeCaster/
+vhibes/
 ├── frontend/                 # Next.js frontend application
 ├── smart-contract/          # Smart contracts (Solidity + Hardhat)
 └── badge-n-metadata/        # Badge images and metadata
@@ -53,6 +53,15 @@ VibeCaster/
 
 - **Badge Images**: PNG files for achievements
 - **Metadata**: JSON files for badge descriptions and requirements
+
+## 🎨 Color Scheme
+
+vhibes uses a vibrant coral red color palette that reflects energy, creativity, and social engagement:
+
+- **Dark Primary**: `#C63A35` - Used for dark backgrounds, primary buttons, and headers
+- **Base Primary**: `#EA504B` - Main brand color for primary elements and CTAs
+- **Light Secondary**: `#FF7873` - Used for hover states, accents, and secondary elements
+- **White**: `#FFFFFF` - Clean backgrounds, text on dark, and neutral UI elements
 
 ## 🚀 Quick Start
 
@@ -163,10 +172,10 @@ VibeCaster/
 
 ## 🔗 Links
 
-- **Live App**: [vibecaster.vercel.app](https://vibecaster.vercel.app)
-- **Farcaster Mini App**: [Farcaster Mini App](https://farcaster.xyz/miniapps/vibecaster)
-- **Smart Contracts**: [Base Explorer](https://basescan.org/address/vibecaster)
-- **GitHub**: [github.com/thebabalola/VibeCaster](https://github.com/thebabalola/VibeCaster)
+- **Live App**: [vhibes.vercel.app](https://vhibes.vercel.app)
+- **Farcaster Mini App**: [Farcaster Mini App](https://farcaster.xyz/miniapps/vhibes)
+- **Smart Contracts**: [Base Explorer](https://basescan.org/address/vhibes)
+- **GitHub**: [github.com/thebabalola/vhibes](https://github.com/thebabalola/vhibes)
 
 ## 🛠️ Technology Stack
 
@@ -196,6 +205,6 @@ This project is licensed under the MIT License.
 
 ---
 
-**Made with ❤️ by the VibeCaster team**
+**Made with ❤️ by the vhibes team**
 
 _Roast, Create & Connect - The Future of Social on Farcaster! 🚀✨_
